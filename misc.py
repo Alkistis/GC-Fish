@@ -1,5 +1,5 @@
 """ 
-	This is a library of functions used to calculate Fisher matrices for Euclid GC.
+	This is a library of functions used to calculate Fisher matrices for GC.
 
 	These are the miscellaneous functions that have nothing to do with cosmology.
 """
