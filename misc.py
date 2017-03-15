@@ -9,6 +9,12 @@ from glob import glob
 import numpy as np
 import subprocess as sp
 
+# A function to round to significant figures, not decimal places
+def roundsf(x, n):
+    mask = np.logical_or(np.equal(np.abs(x),np.inf), np.equal(x,0.0))
+    decades = np.power(10.0,n-np.floor(np.log10(np.abs(x)))); decades[mask] = 1.0
+    return np.round(np.array(x)*decades,0)/decades
+
 # Generate a string timestamp
 def get_timestamp():
 	# Calculate the number of seconds since the Brexit referrendum polls closed
